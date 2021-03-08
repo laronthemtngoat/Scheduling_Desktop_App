@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<TitledPane collapsible="false" text="Scheduler Ultra Max Pro" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AppointmentsController">
+   <content>
+      <AnchorPane id="AnchorPane" prefHeight="550.0" prefWidth="1100.0">
+          <children>
+            <TitledPane animated="false" collapsible="false" layoutX="14.0" layoutY="14.0" prefHeight="12.0" prefWidth="202.0" text="Appointments">
+               <font>
+                  <Font name="Garamond" size="18.0" />
+               </font>
+            </TitledPane>
+            <Button fx:id="back" layoutX="14.0" layoutY="496.0" onAction="#clickBackButton" prefHeight="25.0" prefWidth="135.0" text="Back" />
+            <Button fx:id="exit" layoutX="942.0" layoutY="496.0" onAction="#clickExitButton" prefHeight="25.0" prefWidth="135.0" text="Exit" />
+            <TableView fx:id="appointmentsTableView" layoutX="14.0" layoutY="49.0" prefHeight="310.0" prefWidth="902.0">
+              <columns>
+                <TableColumn fx:id="apptIdCol" prefWidth="76.0" text="Appt ID" />
+                <TableColumn fx:id="cmIdCol" prefWidth="76.0" text="Customer ID" />
+                  <TableColumn fx:id="titleCol" prefWidth="78.0" text="Title" />
+                  <TableColumn fx:id="descriptionCol" prefWidth="109.0" text="Description" />
+                  <TableColumn fx:id="locationCol" minWidth="0.0" prefWidth="104.0" text="Location" />
+                  <TableColumn fx:id="contactCol" prefWidth="74.0" text="Contact" />
+                  <TableColumn fx:id="typeCol" minWidth="0.0" prefWidth="57.0" text="Type" />
+                  <TableColumn fx:id="urlCol" prefWidth="114.0" text="URL" />
+                  <TableColumn fx:id="startCol" prefWidth="108.0" text="Start" />
+                  <TableColumn fx:id="endCol" prefWidth="114.0" text="End" />
+              </columns>
+            </TableView>
+            <ChoiceBox fx:id="actionChoices" layoutX="929.0" layoutY="49.0" prefHeight="25.0" prefWidth="147.0" />
+            <TextField fx:id="titleTxt" layoutX="928.0" layoutY="86.0" promptText="Title" />
+            <TextField fx:id="descriptionTxt" layoutX="928.0" layoutY="122.0" promptText="Description" />
+            <TextField fx:id="locationTxt" layoutX="928.0" layoutY="158.0" promptText="Location" />
+            <TextField fx:id="contactTxt" layoutX="928.0" layoutY="192.0" promptText="Contact" />
+            <TextField fx:id="typeTxt" layoutX="928.0" layoutY="225.0" promptText="Type" />
+            <TextField fx:id="startTxt" layoutX="928.0" layoutY="295.0" promptText="Start" />
+            <TextField fx:id="endTxt" layoutX="928.0" layoutY="334.0" promptText="End" />
+            <TextField fx:id="searchTxt" layoutX="14.0" layoutY="409.0" prefHeight="28.0" prefWidth="236.0" />
+            <Button fx:id="submitBttn" layoutX="968.0" layoutY="408.0" mnemonicParsing="false" onAction="#clickSubmitButton" prefHeight="30.0" prefWidth="108.0" text="Submit" />
+            <Button fx:id="clearBttn" layoutX="968.0" layoutY="367.0" mnemonicParsing="false" onAction="#clickClearButton" prefHeight="30.0" prefWidth="108.0" text="Clear" />
+            <Button fx:id="searchBttn" layoutX="265.0" layoutY="409.0" onAction="#clickSearchButton" prefHeight="28.0" prefWidth="135.0" text="Search" />
+            <Button fx:id="refreshBttn" layoutX="781.0" layoutY="409.0" onAction="#clickRefreshButton" prefHeight="28.0" prefWidth="135.0" text="Refresh" />
+            <TextField fx:id="urlTxt" layoutX="928.0" layoutY="263.0" promptText="URL" />
+          </children>
+      </AnchorPane>
+   </content>
+   <font>
+      <Font name="Garamond" size="12.0" />
+   </font>
+</TitledPane>
